@@ -28,8 +28,8 @@ jobs:
 
     - name: Run SonarCloud analysis
       run: |
-        mvn sonar:sonar \
-          -Dsonar.projectKey=ZinebEsso_sonar_tp_2 \
-          -Dsonar.organization=zinebesso \
-          -Dsonar.host.url=https://sonarcloud.io \
-          -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+        mvn org.sonarsource.scanner.maven:sonar-maven-plugin:4.0.0.4121:sonar \
+        -Dsonar.projectKey=ZinebEsso_sonar_tp_2 \
+        -Dsonar.organization=zinebesso \
+        -Dsonar.host.url=https://sonarcloud.io \
+        -Dsonar.login=${{ secrets.SONAR_tp_2 }}
